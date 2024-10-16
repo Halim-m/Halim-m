@@ -13,32 +13,26 @@ on:
 
 jobs:
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-
-      # Checks repo under $GITHUB_WORKSHOP, so your job can access it
+      # Check out the repository to make it accessible
       - name: Checkout repository
-        uses: actions/checkout@v3  # updated to a version supporting Node 16+
-
+        uses: actions/checkout@v3
+      
       # Generates the snake  
       - name: Generate github-contribution-grid-snake
         uses: Platane/snk@v3
         with:
           github_user_name: Halim-m
-          # these next 2 lines generate the files on a branch called "output". This keeps the main branch from cluttering up.
-          gif_out_path: dist/github-contribution-grid-snake.gif
-          svg_out_path: dist/github-contribution-grid-snake.svg
-
+          
       # Show the status of the build. Makes it easier for debugging (if there's any issues).
       - name: Show git status
         run: git status
 
       # Push the changes
       - name: Push changes
-        uses: stefanzweifel/git-auto-commit-action@v4  # updated to a more maintained action
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Update snake contribution grid"
           branch: master
@@ -46,7 +40,7 @@ jobs:
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v3.1.0  # updated to Node 16+
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
           build_dir: dist
