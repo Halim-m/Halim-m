@@ -21,7 +21,7 @@ jobs:
     steps:
       # Check out the repository to make it accessible
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # updated to a version that supports Node 16+
 
       # Generates the snake and output svg and gif
       - name: generate github-contribution-grid-snake
@@ -33,13 +33,13 @@ jobs:
           
       # Push the generated snake files to the "output" branch
       - name: push github-contribution-grid-snake.svg and gif to output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+        uses: crazy-max/ghaction-github-pages@v3.1.0  # updated to a version that supports Node 16+
         with:
           target_branch: output
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+
       # Show the status for debugging purposes
       - name: Check git status
         run: git status
