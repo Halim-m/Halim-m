@@ -30,13 +30,13 @@ jobs:
           github_user_name: ${{ github.repository_owner }}
 
       # Debugging Step 1: List Files in Project Root
-      - name: Debugging: Check Root Directory
+      - name: DebuggingDirectory
         run: |
           echo "Root Directory Contents:"
           ls -la
 
       # Debugging Step 2: Check Contents of Dist Directory
-      - name: Debugging: Check Dist Directory
+      - name: DebuggingDist
         run: |
           echo "Dist Directory Contents:"
           if [ -d "./dist" ]; then
