@@ -50,6 +50,6 @@ I wanna be a fullstack dev.<br>I'm learning spring boot.<br>I'm interested in mi
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Halim-m&theme=gotham&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
 ---
-![snake gif](https://github.com/Halim-m/Halim-m/blob/output/github-contribution-grid-snake.svg)
+![snake gif](https://github.com/Halim-m/Halim-m/blob/output/github-contribution-grid-snake-dark.svg)
 ---
 [![](https://visitcount.itsvg.in/api?id=Halim-m&icon=2&color=0)](https://visitcount.itsvg.in)
