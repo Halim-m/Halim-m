@@ -2,10 +2,9 @@
 
 name: Generate Snake
 
-# This action runs every 6 hours and can be triggered manually.
 on:
   schedule:
-    # every 6 hours
+    # Every 6 hours
     - cron: "0 */6 * * *"
   workflow_dispatch:
 
@@ -21,7 +20,6 @@ jobs:
       # Step 2: Generate Snake Animation
       - name: Generate Snake Animation
         uses: Platane/snk@master
-        id: snake-gif
         with:
           github_user_name: Halim-m
           gif_out_path: dist/github-contribution-grid-snake.gif
@@ -33,13 +31,17 @@ jobs:
           echo "Checking generated files..."
           ls -la dist
 
-      # Step 4: Push Generated Files to Output Branch
-      - name: Push Changes to Output Branch
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GH_PAT }}
-          branch: output
-          force: true
+      # Step 4: Commit and Push Changes to Output Branch
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b output
+          git add dist/
+          git commit -m "Update snake animation"
+          git push origin output --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
       # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
