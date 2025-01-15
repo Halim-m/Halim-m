@@ -2,16 +2,12 @@
 
 name: Generate Snake
 
-# Controls when the action will run. This action runs every 6 hours.
 on:
   push:
     branches:
       - main
   schedule:
-    # every 6 hours
     - cron: "0 */6 * * *"
-
-  # This command allows us to run the Action manually from the Actions tab.
   workflow_dispatch:
 
 jobs:
@@ -27,22 +23,16 @@ jobs:
       - name: Generate Snake Animation
         uses: Platane/snk@v3.2.0
         with:
-          github_user_name: ${{ github.repository_owner }}
+          github_user_name: Halim-m  # Kullanıcı adını manuel giriyoruz
 
-      # Debugging Step 1: List Files in Project Root
-      - name: DebuggingDirectory
+      # Debugging Step 1: Check Animation Output
+      - name: Debugging: Check Snake Animation Output
         run: |
-          echo "Root Directory Contents:"
-          ls -la
-
-      # Debugging Step 2: Check Contents of Dist Directory
-      - name: DebuggingDist
-        run: |
-          echo "Dist Directory Contents:"
-          if [ -d "./dist" ]; then
-            ls -la ./dist
+          echo "Checking Snake Animation Output..."
+          if [ -f "./dist/snake.svg" ]; then
+            echo "Snake.svg found in dist directory."
           else
-            echo "Dist directory does not exist!"
+            echo "Snake.svg not found!"
             exit 1
           fi
 
@@ -52,9 +42,3 @@ jobs:
         with:
           github_token: ${{ secrets.GH_PAT }}
           publish_dir: ./dist
-
-      # Debugging Step 3: Confirm Upload Success
-      - name: Confirm GitHub Pages Deployment
-        run: |
-          echo "Deployment should now be live. Please check the URL:"
-          echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/snake.svg"
