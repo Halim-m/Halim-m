@@ -26,7 +26,7 @@ jobs:
           github_user_name: Halim-m  # Kullanıcı adını manuel giriyoruz
 
       # Debugging Step 1: Check Animation Output
-      - name: Debugging: Check Snake Animation Output
+      - name: DebuggingCheckOutput
         run: |
           echo "Checking Snake Animation Output..."
           if [ -f "./dist/snake.svg" ]; then
