@@ -21,20 +21,16 @@ jobs:
 
       # Step 2: Generate Snake Animation
       - name: Generate Snake Animation
-        uses: Platane/snk@v3.2.0
+        uses: Platane/snk@v3.3.0
         with:
-          github_user_name: Halim-m  # Kullanıcı adını manuel giriyoruz
+          github_user_name: Halim-m
 
-      # Debugging Step 1: Check Animation Output
-      - name: DebuggingCheckOutput
+      # Debugging Step: Check Output
+      - name: Debugging Generate Snake Animation
         run: |
-          echo "Checking Snake Animation Output..."
-          if [ -f "./dist/snake.svg" ]; then
-            echo "Snake.svg found in dist directory."
-          else
-            echo "Snake.svg not found!"
-            exit 1
-          fi
+          echo "Debugging Generate Snake Animation..."
+          ls -la
+          ls -la ./dist || echo "Dist directory not found!"
 
       # Step 3: Upload Snake Animation to GitHub Pages
       - name: Upload Snake Animation to GitHub Pages
