@@ -26,7 +26,6 @@ jobs:
         uses: Platane/snk@v3.2.0
         with:
           github_user_name: ${{ github.repository_owner }}  # GitHub kullanıcı adınız
-          output: dist/snake.svg
 
       - name: Upload Snake Animation to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
