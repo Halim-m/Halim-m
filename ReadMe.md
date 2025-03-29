@@ -1,7 +1,7 @@
 # 💫 About Me:
 I wanna be a fullstack dev.<br>I'm learning spring boot.<br>I'm interested in microservices.
 
-![Alt text](https://spotify-recently-played-readme.vercel.app/api?user=ti0pctlnubm0fub4gxdzsz4po&count={1})
+![Alt text](https://spotify-recently-played-readme.vercel.app/api?user=ti0pctlnubm0fub4gxdzsz4po&unique={true|1|on|yes})
 
 ## 🌐 Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/halim-m) 
