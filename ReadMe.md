@@ -1,5 +1,6 @@
 # 💫 About Me:
-I wanna be a fullstack dev.<br>I'm learning spring boot.<br>I'm interested in microservices.
+Hi, I’m a software engineer who has built experience across a range of fields. Throughout my career, I’ve worked in Backend Development, DevOps, Blockchain, Mobile Applications, and Artificial Intelligence. I now bring together the experiences I’ve gained from leading different projects in my role as Head of Development at BASE3, where I’m also one of the co-founders. At the same time, I work in BSH’s E-System Verification team, helping to improve product testing processes and contributing to software optimization efforts for IoT devices.
+
 
 ## 🌐 Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/halim-m) 
