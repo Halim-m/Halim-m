@@ -23,4 +23,8 @@ I currently work on the on-premise AI platform at Özdilek, covering the model l
   Led the 30-person software team; ROS2, YOLOv8, U-Net, sensor integration.
 
 ---
-![snake gif](https://github.com/Halim-m/Halim-m/blob/output/github-contribution-grid-snake-dark.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Halim-m/Halim-m/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Halim-m/Halim-m/output/github-contribution-grid-snake.svg">
+  <img alt="GitHub contribution grid snake" src="https://raw.githubusercontent.com/Halim-m/Halim-m/output/github-contribution-grid-snake-dark.svg">
+</picture>
